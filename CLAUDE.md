@@ -243,3 +243,55 @@ import { getIndustryContent } from "@/constants/presets";
 const content = getIndustryContent("restaurant"); // "saas" | "restaurant" | "gaming"
 // content.siteName, content.services, content.testimonials, etc.
 ```
+
+---
+
+## COMMUNITY SKILLS INTEGRADAS (16 skills adicionales)
+
+Estas skills se activan automáticamente según el contexto de lo que pidas:
+
+### Diseño & Frontend
+| Skill | Trigger | Capacidades |
+|-------|---------|-------------|
+| `senior-frontend` | "componente React", "optimizar bundle", "scaffold" | Component generator, bundle analyzer, React patterns, Next.js optimization |
+| `frontend-design` | "diseño web", "landing page", "UI creativa" | Aesthetic direction, anti-generic AI design, bold visual choices |
+| `ui-design-system` | "design tokens", "sistema de diseño" | Token generation, component architecture, responsive calcs, handoff docs |
+| `ui-ux-pro-max` | "UI/UX", "paleta colores", "accesibilidad" | 50 styles, 97 palettes, 57 font pairings, 99 UX guidelines, 9 stacks |
+| `3d-web-experience` | "Three.js", "WebGL", "escena 3D" | Stack selection, R3F/Spline/Vanilla, product configurators, optimization |
+| `theme-factory` | "tema", "styling slides", "colores para deck" | 10 preset themes (Ocean, Sunset, Forest, etc.), custom theme creation |
+
+### Marketing & Copy
+| Skill | Trigger | Capacidades |
+|-------|---------|-------------|
+| `copywriting` | "copy", "headline", "CTA", "landing copy" | Conversion copywriting, page-by-page structure, objection handling |
+| `marketing-psychology` | "psicología", "persuasión", "por qué compran" | 70+ mental models (FOMO, anchoring, social proof, Jobs to Be Done) |
+
+### Web Data & Scraping
+| Skill | Trigger | Capacidades |
+|-------|---------|-------------|
+| `scrape` | "scrapear web", "extraer contenido" | Bright Data Web Unlocker, markdown output, CAPTCHA bypass |
+| `search` | "buscar en Google", "SERP" | Google SERP API via Bright Data, JSON structured results |
+| `data-feeds` | "datos de Amazon", "LinkedIn profile" | 40+ datasets (Amazon, LinkedIn, Instagram, TikTok, YouTube) |
+| `bright-data-best-practices` | "Bright Data", "proxy API" | Web Unlocker, SERP, Browser API, scraping patterns |
+| `design-mirror` | "copia este diseño", "hazlo como X web" | Screenshot + CSS extraction, design token mapping, style replication |
+
+### Backend & Productividad
+| Skill | Trigger | Capacidades |
+|-------|---------|-------------|
+| `senior-backend` | "API REST", "database", "backend" | API scaffolder, migrations, load testing, security patterns |
+| `file-organizer` | "organizar archivos", "cleanup" | Duplicate detection, smart organization, directory analysis |
+| `excel-analysis` | "Excel", "spreadsheet", "pivot table" | Pandas analysis, pivot tables, charts, data cleaning |
+
+### Uso combinado para webs de cliente
+
+Cuando crees una web para un cliente, estas skills trabajan en conjunto:
+
+```
+1. copywriting → genera textos de venta para Hero, About, CTA
+2. marketing-psychology → aplica principios de persuasión al layout
+3. design-mirror → copia el estilo visual de la competencia del cliente
+4. ui-ux-pro-max → selecciona paleta, fonts, y estilo óptimo
+5. 3d-web-experience → implementa efectos Three.js apropiados
+6. senior-frontend → optimiza bundle y genera componentes
+7. theme-factory → aplica theme consistente a toda la web
+```
