@@ -316,3 +316,23 @@ const handleMouseMove = (e: React.MouseEvent<HTMLImageElement>) => {
 8. **ease**: `"power1.inOut"` para suave, `"power2.out"` para bounce, `"slow(0.7,0.7,false)"` para preloaders
 9. **Performance**: Animar SOLO `transform` y `opacity` cuando sea posible
 10. **revertOnUpdate**: `{ dependencies: [dep], revertOnUpdate: true }` para re-ejecutar
+
+## New Components Available (Mega Upgrade)
+
+### Extra Sections
+- `Pricing.tsx` — Glass cards, yearly/monthly toggle, highlighted plan
+- `Testimonials.tsx` — Star ratings, avatar cards, hover glow
+- `Team.tsx` — Hover-reveal cards, social overlay
+- `FAQ.tsx` — Animated accordion with AnimatePresence
+- `Gallery.tsx` — Masonry grid, lightbox, hover zoom
+- `Stats.tsx` — GSAP animated counters on scroll
+
+### Extra 3D Effects
+- `ParticleField.tsx` — 3000 interactive particles
+- `MorphingSphere.tsx` — Distorted icosahedron with metallic material
+- `Globe.tsx` — Wireframe globe with connection lines
+- `ShaderBackground.tsx` — Animated simplex noise gradient
+
+### Systems
+- `lib/themes.ts` — 6 industry presets with CSS variable injection
+- `lib/imageProcessor.ts` — Client-side image homogenization pipeline

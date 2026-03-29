@@ -275,3 +275,23 @@ Si Claude Code tiene GitHub MCP configurado, puede leer cualquier archivo del re
 ```
 "Lee el Hero.tsx de semaes111/3DWEB-NIVEL-DIOS y adáptalo para este proyecto"
 ```
+
+## New Components Available (Mega Upgrade)
+
+### Extra Sections
+- `Pricing.tsx` — Glass cards, yearly/monthly toggle, highlighted plan
+- `Testimonials.tsx` — Star ratings, avatar cards, hover glow
+- `Team.tsx` — Hover-reveal cards, social overlay
+- `FAQ.tsx` — Animated accordion with AnimatePresence
+- `Gallery.tsx` — Masonry grid, lightbox, hover zoom
+- `Stats.tsx` — GSAP animated counters on scroll
+
+### Extra 3D Effects
+- `ParticleField.tsx` — 3000 interactive particles
+- `MorphingSphere.tsx` — Distorted icosahedron with metallic material
+- `Globe.tsx` — Wireframe globe with connection lines
+- `ShaderBackground.tsx` — Animated simplex noise gradient
+
+### Systems
+- `lib/themes.ts` — 6 industry presets with CSS variable injection
+- `lib/imageProcessor.ts` — Client-side image homogenization pipeline
