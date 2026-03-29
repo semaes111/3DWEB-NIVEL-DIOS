@@ -166,3 +166,80 @@ Use the BentoTilt wrapper from `Features.tsx` for any tiltable grid card. The pe
 - Vercel: `vercel.json` included (SPA rewrites)
 - Netlify: `netlify.toml` included
 - VPS: `npm run build` → serve `dist/` folder
+
+---
+
+## MEGA UPGRADE — Componentes Adicionales
+
+### 6 Secciones Nuevas
+
+| Sección | Archivo | Descripción |
+|---------|---------|-------------|
+| Pricing | `sections/Pricing.tsx` | Cards glass con toggle yearly/monthly, plan destacado, features con check icons |
+| Testimonials | `sections/Testimonials.tsx` | Grid de quotes con avatar, estrellas, hover glow line |
+| Team | `sections/Team.tsx` | Cards con imagen hover-zoom, social overlay que aparece en hover |
+| FAQ | `sections/FAQ.tsx` | Acordeón animado con AnimatePresence, icono + rotación |
+| Gallery | `sections/Gallery.tsx` | Masonry grid con col-span/row-span dinámico, lightbox onClick |
+| Stats | `sections/Stats.tsx` | Counters animados con GSAP ScrollTrigger, se disparan al entrar en viewport |
+
+### 4 Efectos 3D Canvas Nuevos
+
+| Efecto | Archivo | Uso |
+|--------|---------|-----|
+| ParticleField | `canvas/ParticleField.tsx` | 3000 partículas interactivas con additive blending, reacciona al mouse |
+| MorphingSphere | `canvas/MorphingSphere.tsx` | Icosaedro deformado con MeshDistortMaterial, metálico iridiscente |
+| Globe | `canvas/Globe.tsx` | Esfera wireframe con puntos de conexión y líneas, tracking mouse |
+| ShaderBackground | `canvas/ShaderBackground.tsx` | Gradiente mesh animado con simplex noise GLSL, colores configurables |
+
+### Sistema de Temas (lib/themes.ts)
+
+Cambiar toda la web de industria con una línea:
+
+```tsx
+import { getTheme, applyTheme, loadThemeFonts } from "@/lib/themes";
+
+const theme = getTheme("restaurant"); // "saas" | "restaurant" | "architecture" | "gaming" | "music" | "ecommerce"
+applyTheme(theme);     // Inyecta CSS variables
+loadThemeFonts(theme);  // Carga Google Fonts del preset
+```
+
+Cada tema define: colores, fuentes, gradientes, tipo de hero, color del cursor, y secciones recomendadas.
+
+### Procesador de Imágenes (lib/imageProcessor.ts)
+
+Homogenizar imágenes del usuario (temperatura de color, calidad, tamaño):
+
+```tsx
+import { processImage, processImageBatch, IMAGE_PRESETS } from "@/lib/imageProcessor";
+
+// Imagen individual
+const result = await processImage(file, {
+  temperature: "cinematic",  // "warm" | "cool" | "neutral" | "cinematic" | "golden" | "moonlight"
+  maxSize: 1920,
+  quality: 0.9,
+  vignette: true,
+});
+// result.dataUrl → usar en <img src={result.dataUrl} />
+
+// Batch: todas las imágenes con la misma configuración
+const batch = await processImageBatch(files, IMAGE_PRESETS.hero);
+
+// Presets rápidos disponibles:
+// IMAGE_PRESETS.hero     → 1920px, cinematic, vignette
+// IMAGE_PRESETS.card     → 800px, warm
+// IMAGE_PRESETS.gallery  → 1200px, neutral
+// IMAGE_PRESETS.thumbnail → 400px, warm
+// IMAGE_PRESETS.team     → 600px, golden, vignette
+// IMAGE_PRESETS.darkMode → 1920px, moonlight, grain
+```
+
+### Presets de Contenido por Industria (constants/presets.ts)
+
+Contenido listo para cada industria (textos, servicios, equipo, testimonios, precios, FAQ):
+
+```tsx
+import { getIndustryContent } from "@/constants/presets";
+
+const content = getIndustryContent("restaurant"); // "saas" | "restaurant" | "gaming"
+// content.siteName, content.services, content.testimonials, etc.
+```
