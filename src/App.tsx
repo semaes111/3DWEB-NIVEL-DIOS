@@ -7,6 +7,12 @@ import { Experience } from "@/components/sections/Experience";
 import { Features } from "@/components/sections/Features";
 import { Tech } from "@/components/sections/Tech";
 import { Projects } from "@/components/sections/Projects";
+import { Pricing } from "@/components/sections/Pricing";
+import { Testimonials } from "@/components/sections/Testimonials";
+import { Team } from "@/components/sections/Team";
+import { Stats } from "@/components/sections/Stats";
+import { Gallery } from "@/components/sections/Gallery";
+import { FAQ } from "@/components/sections/FAQ";
 import { Story } from "@/components/sections/Story";
 import { Contact } from "@/components/sections/Contact";
 import { Footer } from "@/components/layout/Footer";
@@ -31,8 +37,14 @@ const App = () => {
             </div>
           </div>
           <Tech />
+          <Stats />
           <Projects />
+          <Gallery />
+          <Testimonials />
+          <Team />
+          <Pricing />
           <Story />
+          <FAQ />
           <Contact />
         </main>
 
